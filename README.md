@@ -7,7 +7,7 @@ Skoleprosjekt, skal demonstrere hvordan noen design patterns blir brukt i en app
 
 
 
-<b>Abstract Factory:</b>
+<b>Abstract Factory:</b><br/>
 I dette eksempelet har jeg tatt utgangspunkt i light- / darktheme for en applikasjon. Applikasjonen er laget i JavaFX for å skape et mer realistisk eksempel.&nbsp;
 
 ![AbstractFactoryClassDiagram](https://user-images.githubusercontent.com/25662108/97111293-56381980-16de-11eb-8a24-5c256bd7660d.png)
@@ -17,7 +17,7 @@ I dette eksempelet har jeg tatt utgangspunkt i light- / darktheme for en applika
 
 
 
-<b>Builder Class:</b>
+<b>Builder Class:</b><br/>
 Her tar jeg utgangspunkt i en grafisk applikasjon som trenger forskjellige størrelser på noen av komponentene sine, i dette tilfellet en label, skrift, skriftstørrelse og knapp størrelse.&nbsp;
 
 ![BuilderClassDiagram](https://user-images.githubusercontent.com/25662108/97111334-8a133f00-16de-11eb-8e16-4f78006dc491.png)
