@@ -7,7 +7,9 @@ Skoleprosjekt, skal demonstrere hvordan noen design patterns blir brukt i en app
 
 
 
-Abstract Factory Class Diagram&nbsp;
+Abstract Factory Class Diagram
+I dette eksempelet har jeg tatt utgangspunkt i light- / darktheme for en applikasjon. Applikasjonen er laget i JavaFX for å skape et mer realistisk eksempel.&nbsp;
+
 ![AbstractFactoryClassDiagram](https://user-images.githubusercontent.com/25662108/97111293-56381980-16de-11eb-8a24-5c256bd7660d.png)
 
 
