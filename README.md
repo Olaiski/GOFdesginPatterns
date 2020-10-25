@@ -7,14 +7,14 @@ Skoleprosjekt, skal demonstrere hvordan noen design patterns blir brukt i en app
 
 
 
-Abstract Factory Class Diagram
+Abstract Factory Class Diagram&nbsp;
 ![AbstractFactoryClassDiagram](https://user-images.githubusercontent.com/25662108/97111293-56381980-16de-11eb-8a24-5c256bd7660d.png)
 
 
 
-<br />
-<br />
 
 
-Builder Class Diagram
+
+Builder Class Diagram&nbsp;
+
 ![BuilderClassDiagram](https://user-images.githubusercontent.com/25662108/97111334-8a133f00-16de-11eb-8e16-4f78006dc491.png)
