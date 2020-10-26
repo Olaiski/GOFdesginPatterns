@@ -18,7 +18,13 @@ I dette eksempelet har jeg tatt utgangspunkt i light- / darktheme for en applika
 
 
 
-<b>Builder Class:</b><br/>
+<br/><b>Builder Class:</b><br/>
 Her tar jeg utgangspunkt i en grafisk applikasjon som trenger forskjellige størrelser på noen av komponentene sine, i dette tilfellet en label, skrift, skriftstørrelse og knapp størrelse.&nbsp;
 
 ![BuilderClassDiagram](https://user-images.githubusercontent.com/25662108/97111334-8a133f00-16de-11eb-8e16-4f78006dc491.png)
+
+
+
+<br/><b>Builder Class:</b><br/>
+Tatt fra pensumboken (Dive into Design Patterns), Komprimere og kryptere sensitive data uavhengig av koden som faktisk bruker dataene.
+![DecoratorClassDiagram1](https://user-images.githubusercontent.com/25662108/97194559-91078380-17aa-11eb-84d4-0688df1f9ca3.png)
