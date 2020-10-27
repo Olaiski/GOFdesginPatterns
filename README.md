@@ -26,5 +26,5 @@ Her tar jeg utgangspunkt i en grafisk applikasjon som trenger forskjellige stør
 
 
 <br/><b>Builder Class:</b><br/>
-Tatt fra pensumboken (Dive into Design Patterns), Komprimere og kryptere sensitive data uavhengig av koden som faktisk bruker dataene.
+Tatt fra pensumboken (Dive into Design Patterns), Komprimere og kryptere sensitive data uavhengig av koden som faktisk bruker dataene.&nbsp;
 ![DecoratorClassDiagram1](https://user-images.githubusercontent.com/25662108/97194559-91078380-17aa-11eb-84d4-0688df1f9ca3.png)
