@@ -1,7 +1,5 @@
 package no.olai.html;
 
-import java.util.Iterator;
-
 // Leaf
 public class Todo implements TodoList {
 
