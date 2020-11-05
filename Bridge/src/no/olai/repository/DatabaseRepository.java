@@ -30,7 +30,7 @@ public class DatabaseRepository implements StorageRepository {
 
     private Connection conn;
     private PreparedStatement insertLog;
-    private PreparedStatement queryLogId;
+
 
 
     private static DatabaseRepository instance = new DatabaseRepository();
@@ -43,22 +43,18 @@ public class DatabaseRepository implements StorageRepository {
     }
 
 
-    public boolean open() {
+    public void open() {
         try {
             conn = DriverManager.getConnection(CONNECTION_STRING);
 
             Statement statement = conn.createStatement();
             statement.execute(CREATE_TABLE_LOG);
 
-
-            queryLogId = conn.prepareStatement(QUERY_LOG_ID);
             insertLog = conn.prepareStatement(INSERT_LOG);
 
-            return true;
         } catch (SQLException e) {
             System.out.println("Couldn't connect to DB " + e.getMessage());
             e.printStackTrace();
-            return false;
         }
     }
 

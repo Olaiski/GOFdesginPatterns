@@ -2,5 +2,3 @@ LogEntry (1) | Log test 1 | Timestamp: 04-11-2020 at 19:45:50 CET
 LogEntry (2) | Log test 2 | Timestamp: 04-11-2020 at 19:45:50 CET
 LogEntry (3) | Log test 3 | Timestamp: 04-11-2020 at 19:45:50 CET
 LogEntry (4) | Log test 4 | Timestamp: 04-11-2020 at 19:45:50 CET
-
-

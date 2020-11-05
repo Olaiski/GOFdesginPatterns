@@ -7,7 +7,6 @@ import no.olai.repository.LogRepository;
 public class Test {
     public static void main(String[] args) {
 
-        DatabaseRepository.getInstance().open();
 
 
 
@@ -16,21 +15,32 @@ public class Test {
         LogMessage l3 = new LogMessage("Log test 3");
         LogMessage l4 = new LogMessage("Log test 4");
 
-        LogRepository fileRepo = new LogRepository(new FileRepository());
-        fileRepo.save(l1);
-        fileRepo.save(l2);
-        fileRepo.save(l3);
-        fileRepo.save(l4);
+        // Save to txt file
+        LogRepository repo = new LogRepository(new FileRepository());
+        repo.save(l1);
+        repo.save(l2);
+        repo.save(l3);
+        repo.save(l4);
 
-        LogRepository dbRepo = new LogRepository(DatabaseRepository.getInstance());
-        dbRepo.save(l1);
-        dbRepo.save(l2);
-        dbRepo.save(l3);
-        dbRepo.save(l4);
+
+
+
+        // Save to DB
+//        DatabaseRepository dbRepo = new DatabaseRepository();
+//        dbRepo.open();
+        DatabaseRepository.getInstance().open();
+
+        repo = new LogRepository(DatabaseRepository.getInstance());
+
+        repo.save(l1);
+        repo.save(l2);
+        repo.save(l3);
+        repo.save(l4);
 
 
 
         DatabaseRepository.getInstance().close();
+//        dbRepo.close();
 
     }
 }
