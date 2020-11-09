@@ -19,7 +19,7 @@ public class Numpad extends GridPane {
                     { "CL" , "0", "*", "="},
             };
 
-    private Map<Operations, String> keymap = new HashMap<>();
+    private final Map<Operations, String> keymap = new HashMap<>();
 
     public Numpad() {
 
