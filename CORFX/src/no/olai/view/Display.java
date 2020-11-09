@@ -1,4 +1,4 @@
-package no.olai;
+package no.olai.view;
 
 import javafx.scene.control.TextField;
 

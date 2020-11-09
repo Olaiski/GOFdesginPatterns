@@ -7,17 +7,17 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import no.olai.cor.*;
+import no.olai.view.Display;
+import no.olai.view.Numpad;
 
 import java.util.Map;
 
 public class Calculator extends Application {
 
-    private Display display = new Display();
-    private Numpad numpad = new Numpad();
-
-
-    private int n1 = 0;
-    private int n2 = 0;
+    private final Display display = new Display();
+    private final Numpad numpad = new Numpad();
+    private double n1 = 0;
+    private double n2 = 0;
     private Operations op;
 
     @Override
@@ -41,7 +41,7 @@ public class Calculator extends Application {
                     if (n1 <= 0) {
                         for (Map.Entry<Operations, String> entry : numpad.getKeymap().entrySet()) {
                             if (((Button) item).getText().equals(entry.getValue())) {
-                                n1 = Integer.parseInt(display.getText());
+                                n1 = Double.parseDouble(display.getText());
                                 op = entry.getKey();
 
                                 display.setText("");
@@ -51,8 +51,10 @@ public class Calculator extends Application {
 
 
                     if (n1 > 0 && ((Button) item).getText().equals("=")) {
-                        n2 = Integer.parseInt(display.getText());
+
+                        n2 = Double.parseDouble(display.getText());
                         Numbers request = new Numbers(n1, n2, op);
+
 
                         Chain calc1 = new AddNumbers();
                         Chain calc2 = new SubtractNumbers();
@@ -64,10 +66,11 @@ public class Calculator extends Application {
                         calc3.setNextChain(calc4);
 
 
-                        double ret = calc1.calculate(request);
+                        double returnVal = calc1.calculate(request);
 
-                        display.setText("" + ret);
-                        System.out.println(n1 + " " + op + " " + n2 + " = " + ret);
+
+                        display.setText("" + returnVal);
+                        System.out.println(n1 + " " + op + " " + n2 + " = " + returnVal);
 
                     }
 

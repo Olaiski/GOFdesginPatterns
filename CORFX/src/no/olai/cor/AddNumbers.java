@@ -18,3 +18,4 @@ public class AddNumbers implements Chain {
             return nextInChain.calculate(request);
     }
 }
+

@@ -1,4 +1,4 @@
-package no.olai;
+package no.olai.view;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -28,7 +28,6 @@ public class Numpad extends GridPane {
         keymap.put(Operations.DIV, "/");
         keymap.put(Operations.MULT,"*");
         keymap.put(Operations.CL, "CL");
-        keymap.put(Operations.EQ, "=");
 
         this.setAlignment(Pos.CENTER);
         this.setVgap(15);

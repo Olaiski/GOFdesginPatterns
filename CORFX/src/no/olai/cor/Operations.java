@@ -6,6 +6,5 @@ public enum Operations {
     SUB,
     MULT,
     DIV,
-    EQ,
     CL
 }
