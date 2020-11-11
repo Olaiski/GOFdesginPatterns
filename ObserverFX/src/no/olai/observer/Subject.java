@@ -8,6 +8,4 @@ public interface Subject {
 
     void notifyObservers();
 
-    Object getUpdate(Observer obj);
-
 }

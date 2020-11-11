@@ -9,14 +9,16 @@ public class Publisher implements Subject {
     private String message;
     private boolean changed;
 
+
     public Publisher() {
         this.observers = new ArrayList<>();
     }
 
     @Override
     public void subscribe(Observer obj) {
-        if (obj == null) throw new NullPointerException("Null obs.");
-        if (!observers.contains(obj)) observers.add(obj);
+        if (obj == null)
+            throw new NullPointerException("Null obs.");
+        if (!isSubscribed(obj)) observers.add(obj);
     }
 
     @Override
@@ -31,17 +33,12 @@ public class Publisher implements Subject {
 
     @Override
     public void notifyObservers() {
-        List<Observer> observersL = null;
+        List<Observer> observersL;
         if (!changed) return;
         observersL = new ArrayList<>(this.observers);
         this.changed = false;
         for (Observer o : observersL)
-            o.update();
-    }
-
-    @Override
-    public Object getUpdate(Observer obj) {
-        return this.message;
+            o.update(message);
     }
 
     public void postMessage(String msg) {

@@ -18,7 +18,7 @@ public class MainChat extends VBox {
         this.setPadding(new Insets(5));
         this.setSpacing(10);
 
-        Text txtName = new Text("Observable ");
+        Text txtName = new Text("Publisher ");
         txtName.setFont(new Font("consolas", 40));
 
         btSend = new Button("Send");
@@ -29,6 +29,7 @@ public class MainChat extends VBox {
 
         VBox vBox = new VBox();
         vBox.setSpacing(10);
+
 
         vBox.setAlignment(Pos.CENTER);
         vBox.getChildren().addAll(taChat, btSend);

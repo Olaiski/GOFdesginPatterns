@@ -14,7 +14,6 @@ public class MessageBox extends VBox {
 
     private Text txtName;
     private TextArea taChat;
-    private Button btUpdate;
     private Button btSub;
     private Button btUnsub;
     private Label lblStatus;
@@ -33,14 +32,14 @@ public class MessageBox extends VBox {
         taChat.setMaxHeight(100);
         taChat.setEditable(false);
 
-        btUpdate = new Button("Update");
+
         btSub = new Button("Subscribe");
         btUnsub = new Button("Unsubscribe");
         HBox hBox = new HBox();
         hBox.setAlignment(Pos.CENTER);
         hBox.setSpacing(10);
         hBox.setPadding(new Insets(3));
-        hBox.getChildren().addAll(btUpdate, btSub, btUnsub);
+        hBox.getChildren().addAll(btSub, btUnsub);
 
         lblStatus = new Label();
 
@@ -48,17 +47,10 @@ public class MessageBox extends VBox {
 
     }
 
-    public Text getTxtName() {
-        return txtName;
-    }
-
     public TextArea getTaChat() {
         return taChat;
     }
 
-    public Button getBtUpdate() {
-        return btUpdate;
-    }
 
     public Button getBtSub() {
         return btSub;
