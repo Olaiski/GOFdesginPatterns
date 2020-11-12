@@ -12,7 +12,6 @@ public class BallGame extends Application {
     public void start(Stage primaryStage) throws Exception{
 
         BorderPane root = new BorderPane();
-
         GamePane gamePane = new GamePane();
         MenuPane mc = new MenuPane();
 

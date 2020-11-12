@@ -5,6 +5,7 @@ public class PlayingState extends State {
     public PlayingState(GamePane gamePane) {
         super(gamePane);
         gamePane.setPlaying(true);
+        gamePane.setTurbo(false);
     }
 
     @Override

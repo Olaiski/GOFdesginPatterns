@@ -2,7 +2,11 @@ package no.olai.state;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.geometry.Insets;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -19,7 +23,7 @@ public class GamePane extends Pane {
     private boolean playing = false;
     private boolean turbo = false;
 
-    private final int SCORE_GOAL = 4000;
+    private final int SCORE_GOAL = 1000;
     private int score;
 
     public final double radius = 10;
@@ -96,10 +100,14 @@ public class GamePane extends Pane {
     }
 
     public void setTurbo(boolean turbo) {
-        if (turbo)
+        if (turbo){
             animation.setRate(animation.getRate() + 2);
-        else
+            this.setBackground(new Background(new BackgroundFill(Color.LIME, CornerRadii.EMPTY, Insets.EMPTY)));
+        }
+        else {
             animation.setRate(1);
+            this.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY)));
+        }
 
         this.turbo = turbo;
     }
@@ -144,6 +152,8 @@ public class GamePane extends Pane {
 
     private void winCheck() {
 
+
+
         lblScore.setText("Score: " + score++);
 
         if (score == SCORE_GOAL && turbo && isPlaying()) {
@@ -163,6 +173,8 @@ public class GamePane extends Pane {
             lblScore.setText("Game over");
             setPlaying(false);
         }
+
+
     }
 
 
