@@ -3,13 +3,13 @@ package no.olai.html;
 import java.util.ArrayList;
 
 // Composite
-public class Project implements TodoList {
+public class TodoComposite implements TodoComponent {
 
     private String title;
-    private ArrayList<TodoList> todos;
+    private ArrayList<TodoComponent> todos;
 
 
-    public Project(String title, ArrayList<TodoList> todos) {
+    public TodoComposite(String title, ArrayList<TodoComponent> todos) {
         this.title = title;
         this.todos = todos;
     }
@@ -21,7 +21,7 @@ public class Project implements TodoList {
         html.append(this.title);
         html.append("</b>");
         html.append("\n<ul>");
-        for (TodoList t : todos) {
+        for (TodoComponent t : todos) {
             html.append("\n <li>    ");
             html.append(t.getHtml());
             html.append("   </li>");

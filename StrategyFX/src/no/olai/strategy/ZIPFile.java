@@ -47,7 +47,6 @@ public class ZIPFile implements FileStrategy {
                     LocalDate.ofEpochDay(ze.getTime() / MILLS_IN_DAY)));
 
 
-
         return sb.toString();
     }
 

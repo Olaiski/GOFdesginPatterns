@@ -14,43 +14,44 @@ public class Test {
 
 
         // Main list
-        ArrayList<TodoList> todos = new ArrayList<>();
-        todos.add(new Todo("Main Todo 1"));
+        ArrayList<TodoComponent> todos = new ArrayList<>();
+        todos.add(new TodoLeaf("Main Todo 1"));
 
 
 
         // Subproject 1 / 2
-        ArrayList<TodoList> subprojectTodos = new ArrayList<>();
-        subprojectTodos.add(new Todo("Subproject 1 - Todo 1"));
-        subprojectTodos.add(new Todo("Subproject 1 - Todo 2"));
+        ArrayList<TodoComponent> subprojectTodos = new ArrayList<>();
+        subprojectTodos.add(new TodoLeaf("Subproject 1 - Todo 1"));
+        subprojectTodos.add(new TodoLeaf("Subproject 1 - Todo 2"));
 
-        ArrayList<TodoList> subprojectTodos2 = new ArrayList<>();
-        subprojectTodos2.add(new Todo("Subproject 2 - Todo 1"));
-        subprojectTodos2.add(new Todo("Subproject 2 - Todo 2"));
+        ArrayList<TodoComponent> subprojectTodos2 = new ArrayList<>();
+        subprojectTodos2.add(new TodoLeaf("Subproject 2 - Todo 1"));
+        subprojectTodos2.add(new TodoLeaf("Subproject 2 - Todo 2"));
 
-        subprojectTodos.add(new Project("SubProject (2)", subprojectTodos2));
+        subprojectTodos.add(new TodoComposite("SubProject (2)", subprojectTodos2));
 
-        Project subproject1 = new Project("SubProject (1)", subprojectTodos);
+        TodoComposite subproject1 = new TodoComposite("SubProject (1)", subprojectTodos);
         todos.add(subproject1);
 
         // Main list 2
-        todos.add(new Todo("Main Todo 2"));
+        todos.add(new TodoLeaf("Main Todo 2"));
 
 
         // Subproject 3
         subprojectTodos = new ArrayList<>();
-        subprojectTodos.add(new Todo("Subproject 3 - Todo 1"));
-        subprojectTodos.add(new Todo("Subproject 3 - Todo 2"));
+        subprojectTodos.add(new TodoLeaf("Subproject 3 - Todo 1"));
+        subprojectTodos.add(new TodoLeaf("Subproject 3 - Todo 2"));
 
-        todos.add(new Project("Subproject (3)",subprojectTodos));
+        todos.add(new TodoComposite("Subproject (3)",subprojectTodos));
 
         // Main list 3
-        todos.add(new Todo("Main Todo 3"));
+        todos.add(new TodoLeaf("Main Todo 3"));
 
-        Project mainProject = new Project("Todos", todos);
+        TodoComposite mainTodoComposite = new TodoComposite("Todos", todos);
 
 
-//        System.out.println(mainProject.getHtml());
+        System.out.println(mainTodoComposite.getHtml());
+
 
 
         try {
@@ -59,7 +60,7 @@ public class Test {
             System.out.println("File created " + f.getName());
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(f));
-            writer.write(mainProject.getHtml());
+            writer.write(mainTodoComposite.getHtml());
 
             writer.close();
 

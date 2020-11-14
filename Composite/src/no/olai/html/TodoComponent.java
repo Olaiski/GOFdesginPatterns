@@ -1,7 +1,7 @@
 package no.olai.html;
 
 // Component
-public interface TodoList {
+public interface TodoComponent {
 
     String getHtml();
 
